@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './App.css'
+import { useDispatch } from 'react-redux'
 
 function App() {
 
-      console.log()
+  const dispatch = useDispatch()
   return (
 
     <>
-      <h1>Blog with appwirte</h1>
+      <h1 className='text-3xl bg-gray text-red-400'>Blog with appwirte</h1>
     </>
   )
 }

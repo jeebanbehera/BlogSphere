@@ -1,3 +1,4 @@
+<!--  -->
 AuthService (Appwrite)
 
 A simple authentication wrapper using Appwrite to handle user signup, login, session management, and logout.
@@ -15,7 +16,7 @@ Get current logged-in user
 Logout (delete all sessions)
 
 
-
+<!--  -->
 # BlogSphere – Appwrite Blog Backend Service
 
 This project provides a complete service layer for managing blog posts using **Appwrite** as the backend.  
@@ -44,3 +45,21 @@ It handles CRUD operations for posts, file uploads, and post retrieval with quer
 ---
 
 ## 📦 Folder Structure
+
+
+
+<!--  -->
+🔐 Redux Toolkit – Auth Slice
+
+This file defines an authentication slice using Redux Toolkit.
+It manages the login/logout state and stores user data in the global Redux store.
+
+✅ Features
+
+Manage authentication status (logged in / logged out)
+
+Store and update user information
+
+Uses Redux Toolkit’s createSlice
+
+Simple and reusable for any React project
