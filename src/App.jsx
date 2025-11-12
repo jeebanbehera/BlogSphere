@@ -1,16 +1,37 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { useDispatch } from 'react-redux'
+import authService from './appwrite/auth'
+import { authSlice, logIn, logout } from './store/authSlice'
+import { Footer, Header } from './componants'
 
 function App() {
-
+  const [loading,setLoading] = useState(true)
   const dispatch = useDispatch()
-  return (
 
-    <>
-      <h1 className='text-3xl bg-gray text-red-400'>Blog with appwirte</h1>
-    </>
-  )
+  useEffect(()=>{
+    authService.getCurrentUser()
+    .then((userData)=>{
+      if(userData){
+        dispatch(logIn(userData))
+      }
+      else{
+        dispatch(logout())
+      }
+    })
+    .finally(()=>{
+      setLoading(false)
+    })
+  },[])
+
+  return !loading ? (
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header/>
+        <Footer/>
+      </div>
+      </div>
+  ) : null
 }
 
 export default App
