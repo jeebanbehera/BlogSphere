@@ -67,6 +67,7 @@ Simple and reusable for any React project
 
 
 <!--  -->
+---
 Logout Button Component
 
 A simple React component that logs out the user using Appwrite and updates Redux state.
