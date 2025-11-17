@@ -63,3 +63,19 @@ Store and update user information
 Uses Redux Toolkit’s createSlice
 
 Simple and reusable for any React project
+
+
+
+<!--  -->
+Logout Button Component
+
+A simple React component that logs out the user using Appwrite and updates Redux state.
+
+🔧 How It Works
+
+Calls authService.logout() to sign out the user.
+
+Dispatches logout() from Redux on success.
+
+Logs error if logout fails.
+
