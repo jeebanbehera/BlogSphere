@@ -80,3 +80,75 @@ Dispatches logout() from Redux on success.
 
 Logs error if logout fails.
 
+
+---
+Header Component
+
+The Header component shows the navigation bar and updates menu items based on whether the user is logged in.
+
+Features
+
+Shows Login/Signup when logged out
+
+Shows All Posts / Add Post / Logout when logged in
+
+Uses useSelector to check auth state
+
+Uses useNavigate to change pages
+
+Displays Logo and navigation buttons
+
+Styled with TailwindCSS
+
+How It Works
+
+authStatus is taken from Redux
+
+navItems are filtered using active
+
+Clicking a button runs navigate(item.slug)
+
+Logout button appears only when authenticated
+
+
+---
+Input Component
+
+A reusable input field with label support, unique ID, and ref forwarding.
+
+Features
+
+Supports labels using useId()
+
+Uses forwardRef for parent access (focus, validation)
+
+Accepts all input props (placeholder, onChange, etc.)
+
+TailwindCSS styling
+
+Customizable with className
+
+Usage
+<Input 
+  label="Email" 
+  type="email" 
+  placeholder="Enter email" 
+/>
+
+
+---Button Component
+
+A simple reusable button that supports custom background color, text color, and styling.
+
+Features
+
+Customizable colors (bgColor, textColor)
+
+Accepts all extra props
+
+Supports children for button text
+
+Styled with TailwindCSS
+
+Usage
+<Button bgColor="bg-green-600">Submit</Button>
