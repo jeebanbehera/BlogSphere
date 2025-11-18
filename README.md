@@ -136,7 +136,8 @@ Usage
 />
 
 
----Button Component
+---
+Button Component
 
 A simple reusable button that supports custom background color, text color, and styling.
 
